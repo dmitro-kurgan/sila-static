@@ -1,0 +1,69 @@
+extends ./templates/base
+
+block title
+	title Enter
+
+block main
+	.wrapper.wrapper--enter-pg
+		include ./templates/header
+		section.breadcrumb
+			.container
+				.breadcrumb_block
+					ul.clearfix
+						li
+							a(href='./') Главная
+						li.
+							Войти
+		section.enter
+			.container
+				h2 Войти
+				.enter_block
+					.row
+						.col-md-6
+							.enter_left
+								form
+									.form-group
+										label(for='login') Логин
+										input.form-control(type='text', name='logn', id='login', placeholder='Логин')
+									.form-group
+										label(for='password') Пароль
+										input.form-control(type='text', name='password', id='password', placeholder='Пароль')
+									.form-group.form-group--btns
+										a(href="#").enter-forgot Забыли пароль?
+										a(href="#").btn.main-btn.main-btn--black Войти
+						.col-md-6
+							.enter_right
+								a(href="#").btn.enter-facebook Войти через Facebook
+								a(href="#").btn.enter-google Войти через Google +
+
+		section.registration
+			.container
+				h2 Регистрация
+				.registration_block
+					.row
+						.col-md-6
+							.registration_left
+								form
+									.form-group
+										label(for='name') Имя
+										input.form-control(type='text', name='name', id='name')
+									.form-group
+										label(for='lastname') Фамилия
+										input.form-control(type='text', name='lastname', id='lastname')
+									.form-group
+										label(for='email') E-mail
+										input.form-control(type='text', name='email', id='email')
+						.col-md-6
+							.registration_right
+								form
+									.form-group
+										label(for='pwrd') Пароль
+										input.form-control(type='text', name='pwrd', id='pwrd')
+									.form-group
+										label(for='repwrd') Подтвердите 
+											br
+											| пароль
+										input.form-control(type='text', name='repwrd', id='repwrd')
+									.form-group.form-group--btns
+										a(href="#").btn.main-btn.main-btn--black Зарегистрироваться
+		include ./templates/footer

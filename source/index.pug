@@ -1,0 +1,34 @@
+extends ./templates/base
+
+block title
+	title Index
+
+block main
+	.wrapper.wrapper--index
+		include ./templates/header
+		section.banner
+			.container
+				.slider.slick-banner
+					mixin banner-slider(name, info, img)
+						div
+							.slick-banner_box
+								.row
+									.col-xs-12.col-sm-push-6.col-sm-6
+										.slick-banner_right
+											.slick-banner_img(style='background-image: url(' + require('./components/images/' + img) + ')')
+									.col-xs-12.col-sm-pull-6.col-sm-6
+										.slick-banner_left
+											.slick-banner_info
+												.slick-banner_title
+													h3= name	
+												.slick-banner_text
+													p= info
+												a(href="#").btn.main-btn.main-btn--white Подробнее
+					+banner-slider('Тормозные колодки от официального дилера', 'Идейные соображения высшего порядка, а также посинформационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение новых предложений.', 'banner-pic-1.png')
+					+banner-slider('Тормозные колодки от официального дилера', 'Идейные соображения высшего порядка, а также посинформационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение новых предложений.', 'banner-pic-1.png')
+					+banner-slider('Тормозные колодки от официального дилера', 'Идейные соображения высшего порядка, а также посинформационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение новых предложений.', 'banner-pic-1.png')
+		include ./templates/sales
+		include ./templates/new
+		include ./templates/blog-block
+		include ./templates/join-us
+		include ./templates/footer

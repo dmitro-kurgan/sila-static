@@ -1,0 +1,129 @@
+extends ./templates/base
+
+block title
+	title Category
+
+block main
+	.wrapper.wrapper--category
+		include ./templates/header
+		section.breadcrumb
+			.container
+				.breadcrumb_block
+					ul.clearfix
+						li
+							a(href='./') Главная
+						li.
+							Запчасти КАМАЗ
+		section.category
+			.container
+				.row
+					.col-xs-12.col-sm-7.col-sm-push-5.col-md-8.col-md-push-4.col-lg-9.col-lg-push-3
+						.category_right
+							.category_head
+								h2.
+									Запчасти КАМАЗ
+								.category_head-left
+									.category_item
+										span цена от 500 до 15 000
+										i
+									.category_item
+										span Запчасти КАМАЗ
+										i
+									a(href="#").category_default
+										span Сбросить
+										i
+								.category_head-right
+									select.selectpicker.custom-picker(title='сортировать по', required)
+										option Названию
+										option Цене
+										option Популярности
+										option Рейтингу
+							.category_main
+								mixin categorybox(classname, pic, name, code, mark, weight, cost)
+									a(href="product-pg.html").col-lg-4.col-md-6.search_box
+										div(class='' + classname)
+										.search_img
+											img(src=require("./components/images/" + pic), alt="photo")
+										.search_name
+											h6= name
+										.search_char
+											.search_code Код:
+												span= code
+											.search_mark Артикул: 
+												span= mark
+											.search_weight Вес: 
+												span= weight
+										.search_cost
+											p= cost
+										object
+											a(href="#").btn.main-btn В корзину
+								- var has = 'search_has';
+								- var hasnot = 'search_hasnot';
+								.search_row.clearfix
+									+categorybox(has, 'pic-1.png', 'Колодка тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+									+categorybox(hasnot, 'pic-2.png', 'Колодка Тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+									+categorybox(has, 'pic-3.png', 'Колодка Тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+
+									+categorybox(has, 'pic-1.png', 'Колодка тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+									+categorybox(has, 'pic-2.png', 'Колодка Тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+									+categorybox(has, 'pic-3.png', 'Колодка Тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+
+									+categorybox(has, 'pic-1.png', 'Колодка тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+									+categorybox(hasnot, 'pic-2.png', 'Колодка Тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+									+categorybox(has, 'pic-3.png', 'Колодка Тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+								a(href="#").btn.search_showmore Показать еще
+								.search_pagination.container
+									.pagination-block
+										.pagination.loop-pagination
+											.page-numbers-wrapper
+												a.page-numbers(href='#') 1
+												span.page-numbers(href='#') 2
+												a.page-numbers.current 3
+												span.page-numbers.dots …
+												a.page-numbers(href='#') 30
+					.col-xs-12.col-sm-5.col-sm-pull-7.col-md-4.col-md-pull-8.col-lg-3.col-lg-pull-9
+						.category_left
+							form
+								.category_price
+									h3 Цена
+									form
+										.form-group
+											#slider-range
+											.category_price-wrapper
+												input.form-control#price(name='price')
+												input.form-control#price2(name='price2')
+												span руб
+								.category_parts
+									h3 Запчасти для автомобилей
+									mixin checkbox(label, id, name)
+										.checkbox
+											label(for='' + label)
+												input(type='checkbox', name='country', value='', id='' + id)
+												.checkbox_ok
+												| 
+												span= name
+									+checkbox('parts1', 'parts1', 'Запчасти КАМАЗ')
+									+checkbox('parts2', 'parts2', 'Запчасти МАЗ')
+									+checkbox('parts3', 'parts3', 'Запчасти ЗИЛ')
+									+checkbox('parts4', 'parts4', 'Запчасти УРАЛ')
+									+checkbox('parts5', 'parts5', 'Запчасти УАЗ')
+									+checkbox('parts6', 'parts6', 'Запчасти ГАЗ')
+									+checkbox('parts7', 'parts7', 'Запчасти ПАЗ')
+								.category_production
+									h3 Производитель
+									+checkbox('production1', 'production1', 'Electra')
+									+checkbox('production2', 'production2', 'Schwlnn')
+									+checkbox('production3', 'production3', 'ООО Сила')
+									+checkbox('production4', 'production4', 'Electra')
+									a(href="#").load-more Еще
+								.category_production
+									h3 Производитель
+									+checkbox('production5', 'production5', 'Electra')
+									+checkbox('production6', 'production6', 'Schwlnn')
+									+checkbox('production7', 'production7', 'ООО Сила')
+									+checkbox('production8', 'production8', 'Electra')
+									+checkbox('production9', 'production9', 'Electra')
+									+checkbox('production10', 'production10', 'Schwlnn')
+									+checkbox('production11', 'production11', 'ООО Сила')
+									a(href="#").load-more Еще
+		include ./templates/footer

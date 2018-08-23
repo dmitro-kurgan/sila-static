@@ -1,0 +1,237 @@
+.wrapper {
+	&--blog {
+
+	}
+}
+.blog-pg, .article {
+	&_block {
+		padding: 60px 0 20px 0;
+	}
+	&_box {
+		padding-left: 105px;
+		position: relative;
+		margin-bottom: 80px;
+		display: block;
+		@media #{$desctop} {
+			padding-left: 45px;
+			margin-bottom: 60px;
+		}
+		@media #{$mobile} {
+			padding-left: 0px;
+		}
+	}
+	&_data {
+		color: $grey;
+		font-weight: 800;
+		text-transform: uppercase;
+		max-width: 70px;
+		display: inline-block;
+		line-height: 0.85;
+		position: absolute;
+		left: 0px;
+		top: 1px;
+		@media #{$mobile} {
+			display: none;
+		}
+		&_day, &_month {
+			display: block;
+		}
+		&_day {
+			text-align: right;
+			font-size: 50px;
+			@media #{$desctop} {
+				font-size: 32px;
+			}
+		}
+		&_month {
+			font-size: 33px;
+			@media #{$desctop} {
+				font-size: 18px;
+			}
+		}
+	}
+	&_inner {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		background-color: rgba(0, 0, 0, 0.5);
+		opacity: 0;
+		transition: $main_transition;
+		p {
+			font-weight: 800;
+			color: $main_color;
+			text-transform: uppercase;
+		}
+	}
+	&_img {
+		width: 100%;
+		min-height: 355px;
+		display: table;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		@media screen and (max-width: 540px) {
+			min-height: 260px;
+		}
+		&:hover {
+			.blog-pg {
+				&_inner {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&_info {
+		background-color: $light-grey;
+		padding: 40px 30px;
+		min-height: 370px;
+		@media #{$tablet} {
+			min-height: initial;
+		}
+		@media #{$mobile} {
+			padding: 20px;
+		}
+		&_data {
+			font-size: 25px;
+			color: #959393;
+		}
+		h5 {
+			margin: 10px 0 15px 0;
+			font-size: 33px;
+			font-weight: 700;
+			line-height: 0.75;
+			min-height: 50px;
+			transition: $main_transition;
+			@media #{$desctop-md} {
+				font-size: 28px;
+			}
+			@media #{$tablet} {
+				min-height: initial;
+				margin: 15px 0;
+			}
+			@media #{$mobile} {
+				font-size: 24px;
+			}
+			&:hover {
+				color: $orange;
+			}
+		}
+		p {
+			font-size: 21px;
+			line-height: 1.25;
+			@media #{$mobile} {
+				font-size: 18px;
+			}
+		}
+		a {
+			color: $orange;
+			font-size: 21px;
+			text-transform: uppercase;
+			font-weight: 800;
+			margin-top: 40px;
+			display: inline-block;
+			@media #{$tablet} {
+				margin-top: 25px;
+			}
+			@media #{$mobile} {
+				font-size: 18px;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	
+	&_pagination {
+		padding: 35px 0;
+		width: 100%;
+		text-align: center;
+		border-top: 2px solid #e5e7ea;
+		.pagination {
+			width: 100%;
+			margin: 0px;
+		}
+		.page-numbers-wrapper {
+			display: inline-block;
+		}
+		.page-numbers {
+			border-radius: 10px;
+			padding: 11px 0px;
+			width: 42px;
+			display: inline-block;
+			text-align: center;
+			height: 42px;
+			vertical-align: middle;
+			border: 2px solid transparent;
+		}
+		.page-numbers.current {
+			border: 2px solid $orange;
+			color: $orange;
+		}
+		.prev, .next {
+			color: #979797;
+			font-size: 17px;
+			text-transform: uppercase;
+			font-weight: 700;
+			position: relative;
+			width: initial;
+			transition: $main_transition;
+			@media #{$mobile} {
+				font-size: 0px;
+				&:before {
+					content: '';
+					position: absolute;
+					width: 0px;
+					height: 0px;
+					border: solid #000;
+					border-width: 0px 0px 2px 2px;
+					padding: 4px;
+				}
+			}
+			&:hover {
+				color: $orange;
+				&:after {
+					border-color: $orange;
+				}
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				height: 0px;
+				top: 12px;
+				width: 0px;
+				border: solid #979797;
+				border-width: 0px 2px 2px 0px;
+				padding: 5px;
+				transition: $main_transition;
+				@media #{$mobile} {
+					display: none;
+				}
+			}
+		}
+		.prev {
+			float: left;
+			@media #{$mobile} {
+				&:before {
+					@include addPrefix(transform, rotate(45deg));
+				}
+			}
+			&:after {
+				left: -25px;
+				@include addPrefix(transform, rotate(135deg));
+			}
+		}
+		.next {
+			float: right;
+			@media #{$mobile} {
+				&:before {
+					@include addPrefix(transform, rotate(225deg));
+				}
+			}
+			&:after {
+				right: -25px;
+				@include addPrefix(transform, rotate(-45deg));
+			}
+		}
+	}
+}

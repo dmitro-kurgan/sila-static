@@ -1,0 +1,83 @@
+extends ./templates/base
+
+block title
+	title Search
+
+block main
+	.wrapper.wrapper--contacts
+		include ./templates/header
+		section.breadcrumb
+			.container
+				.breadcrumb_block
+					ul.clearfix
+						li
+							a(href='./') Главная
+						li.
+							Поиск
+		section.search
+			.search_result
+				.container
+					.row
+						.search_left.col-md-6
+							p.
+								Результаты поиска по запросу: 
+							span Колодка
+						.search_right.col-md-6
+							p
+								| найдено 
+								span 10 000 
+								| товаров
+							form
+								select.selectpicker.custom-picker(title='сортировать по', required)
+									option Названию
+									option Цене
+									option Популярности
+									option Рейтингу
+			.search_block
+				.container
+					mixin searchbox(classname, pic, name, code, mark, weight, cost)
+						a(href="product-pg.html").col-lg-3.col-md-4.col-sm-6.search_box
+							div(class='' + classname)
+							.search_img
+								img(src=require("./components/images/" + pic), alt="photo")
+							.search_name
+								h6= name
+							.search_char
+								.search_code Код:
+									span= code
+								.search_mark Артикул: 
+									span= mark
+								.search_weight Вес: 
+									span= weight
+							.search_cost
+								p= cost
+							object
+								a(href="#").btn.main-btn В корзину
+					- var has = 'search_has';
+					- var hasnot = 'search_hasnot';
+					.search_row.clearfix
+						+searchbox(has, 'pic-1.png', 'Колодка тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+						+searchbox(hasnot, 'pic-2.png', 'Колодка Тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+						+searchbox(has, 'pic-3.png', 'Колодка Тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+						+searchbox(hasnot, 'pic-1.png', 'Колодка Тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+
+						+searchbox(has, 'pic-1.png', 'Колодка тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+						+searchbox(has, 'pic-2.png', 'Колодка Тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+						+searchbox(has, 'pic-3.png', 'Колодка Тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+						+searchbox(hasnot, 'pic-1.png', 'Колодка Тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+					
+						+searchbox(has, 'pic-1.png', 'Колодка тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+						+searchbox(hasnot, 'pic-2.png', 'Колодка Тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+						+searchbox(has, 'pic-3.png', 'Колодка Тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+						+searchbox(has, 'pic-1.png', 'Колодка Тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+					a(href="#").btn.search_showmore Показать еще
+					.search_pagination.container
+						.pagination-block
+							.pagination.loop-pagination
+								.page-numbers-wrapper
+									a.page-numbers(href='#') 1
+									span.page-numbers.current 2
+									a.page-numbers(href='#') 3
+									span.page-numbers.dots …
+									a.page-numbers(href='#') 10
+		include ./templates/footer

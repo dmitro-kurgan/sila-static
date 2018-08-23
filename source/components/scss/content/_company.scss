@@ -1,0 +1,226 @@
+.wrapper {
+	&--company {
+	
+	}
+}
+.company {
+	padding: 80px 0;
+	@media #{$desctop} {
+		padding: 40px 0;
+	}
+	&_banner {
+		min-height: 550px;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		@media #{$tablet} {
+			min-height: 360px;
+		}
+		@media #{$mobile} {
+			min-height: 280px;
+		}
+	}
+	&-about {
+		padding-bottom: 135px;
+		@media #{$tablet} {
+			padding-bottom: 70px;
+		}
+		h2 {
+			padding: 80px 0 30px 0;
+			@media #{$tablet} {
+				padding: 30px 0 20px 0;
+			}
+		}
+		&_left {
+			p {
+				font-weight: 300;
+				font-size: 25px;
+				line-height: 1.15;
+				@media #{$tablet} {
+					font-size: 21px;
+				}
+			}
+		}
+		&_right {
+			@media #{$mobile} {
+				margin-top: 30px;
+			}
+		}
+		&_start, &_team {
+			padding-left: 130px;
+			@media #{$tablet} {
+				padding-left: 65px;
+			}
+			@media #{$mobile} {
+				padding-left: 0px;
+			}
+			p {
+				font-size: 42px;
+				font-weight: 700;
+				@media #{$desctop} {
+					font-size: 32px;
+				}
+			}
+			span {
+				margin-top: 20px;
+				font-size: 17px;
+				font-weight: 300;
+				text-transform: uppercase;
+				display: block;
+				@media #{$desctop} {
+					font-size: 15px;
+					margin-top: 10px;
+				}
+			}
+		}
+		&_team {
+			margin-top: 45px;
+			@media #{$mobile} {
+				margin-top: 30px;
+			}
+		}
+	}
+	&-team {
+		h2 {
+			margin-bottom: 80px;
+			@media #{$tablet} {
+				margin-bottom: 40px;
+			}
+		}
+		&_box {			
+			float: left;
+			margin-bottom: 80px;
+			width: 25%;
+			@media #{$desctop} {
+				margin-bottom: 60px;
+			}
+			@media #{$tablet} {
+				width: 50%;
+			    margin-bottom: 40px;
+			}
+			@media #{$mobile} {
+				width: 100%;
+				max-width: 320px;
+				float: none;
+				margin: auto auto 40px;
+			}
+			&:nth-child(4n+1) {
+				margin-right: 0px;
+				@media #{$mobile} {
+				    margin: auto auto 40px;
+				}
+			}
+		}
+		&_img {
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			min-height: 300px;
+			width: 300px;
+			@media #{$desctop-md} {
+				width: 260px;
+				min-height: 260px;
+			}
+			@media #{$desctop} {
+				width: 220px;
+				min-height: 220px;
+			}
+			@media #{$tablet} {
+				width: 260px;
+				min-height: 260px;
+			}
+			@media #{$mobile} {
+				min-height: 320px;
+				width: 100%;
+			}
+		}
+		&_name {
+			font-size: 25px;
+			font-weight: 800;
+			margin: 30px 0 10px 0;
+			max-width: 300px;
+			@media #{$desctop-md} {
+				font-size: 21px;
+				min-height: 45px;
+			}
+			@media #{$desctop} {
+				margin: 15px 0 7px 0;
+				font-size: 19px;
+			}
+			@media #{$tablet} {
+				max-width: 260px;
+			}
+			@media #{$mobile} {
+				max-width: 100%;
+				min-height: initial;
+			}
+		}
+		&_post {
+			color: #727272;
+			font-weight: 300;
+			margin-bottom: 25px;
+			min-height: 42px;
+			@media #{$desctop} {
+				min-height: 63px;
+				font-size: 19px;
+				margin-bottom: 15px;
+			}
+			@media #{$tablet} {
+				min-height: 42px;
+				max-width: 260px;
+			}
+			@media #{$mobile} {
+				min-height: initial;
+				max-width: 100%;
+			}
+		}
+		&_tel, &_email {
+			font-size: 25px;
+			position: relative;
+			@media #{$desctop-md} {
+				font-size: 21px;
+			}
+			@media #{$desctop} {
+				font-size: 16px;
+			}
+			&:hover {
+				a, span {
+					color: $orange;
+				}
+			}
+			a, span {
+				display: inline-block;
+				vertical-align: middle;
+				transition: $main_transition;
+			}
+			span {
+				display: inline-block;
+				width: 46px;
+				height: 46px;
+				border-radius: 50%;
+				box-shadow: 1px 2px 6px 4px rgba(0, 0, 0, 0.05);
+				margin-right: 20px;
+				font-size: 18px;
+				position: relative;
+				text-align: center;
+				padding: 15px 0;
+				@media #{$desctop-lg} {
+					width: 32px;
+					height: 32px;
+					margin-right: 10px;
+					font-size: 15px;
+					padding: 9px 0;
+				}
+			}
+			i {
+
+			}
+		}
+		&_tel {
+			
+		}
+		&_email {
+			margin-top: 15px;
+		}
+	}
+}

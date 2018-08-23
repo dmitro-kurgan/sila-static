@@ -1,0 +1,75 @@
+extends ./templates/base
+
+block title
+	title Pay & Delivery
+
+block main
+	.wrapper.wrapper--text-pg
+		include ./templates/header
+		section.breadcrumb
+			.container
+				.breadcrumb_block
+					ul.clearfix
+						li
+							a(href='./') Главная
+						li.
+							Оплата и доставка
+		section.delivery
+			.delivery-info
+				.container
+					.delivery-info_block
+						.delivery-info_head
+							h2 Оплата и Доставка
+							p.
+								В настоящее время оперативность и бесперебойность поставок являются неоспоримыми конкурентными преимуществами. Наша компания  осуществляет отгрузку запасных частей с нашего склада и предлагает следующие варианты осуществления доставки товаров:
+						.delivery-info_main
+							ul.row
+								li.col-sm-3
+									.delivery-info_box
+										.delivery-info_img
+											span
+										h3 Доставка день в день
+										p.
+											Доставка день-в-день по Москве и Московской области при условии наличия товара на складе
+								li.col-sm-3
+									.delivery-info_box
+										.delivery-info_img
+											span
+										h3 Бесплатная доставка
+										p.
+											Бесплатная доставка по Москве и Москвоской области при сумме заказа свыше 30 000 рублей
+								li.col-sm-3
+									.delivery-info_box
+										.delivery-info_img
+											span
+										h3 Малогабаритный груз
+										p.
+											Доставка малогабаритных грузов и расходных материалов
+								li.col-sm-3
+									.delivery-info_box
+										.delivery-info_img
+											span
+										h3 По всей территории
+										p.
+											Доставка по всей территории России транспортными компаниями
+				.delivery-slider
+					.container
+						.delivery-slider_block
+							.delivery-slider_left
+								h6 Оплата и
+									br
+									| Доставка
+								p.
+									С другой стороны консультация с широким активом позволяет выполнять важные задания
+							.delivery-slider_right
+								.slider.slick-delivery
+									mixin slider-delivery(link, img)
+										div
+											a(href='' + link).slick-delivery_box
+												.slick-delivery_img(style='background-image: url(' + require('./components/images/' + img) + ')')
+													.slick-delivery_inner
+									+slider-delivery('text.html', 'blog-2.jpg')
+									+slider-delivery('text.html', 'delivery-1.jpg')
+									+slider-delivery('text.html', 'delivery-2.jpg')
+									+slider-delivery('text.html', 'delivery-1.jpg')
+		include ./templates/footer

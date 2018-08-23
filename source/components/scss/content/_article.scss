@@ -1,0 +1,130 @@
+.wrapper {
+	&--article {
+		.article {
+			&_block {
+				padding: 50px 0 0;	
+			}
+			&_box {
+				max-width: 1025px;
+				margin: auto;
+				padding: 0px 0 145px 105px;
+				@media #{$mobile} {
+					padding: 0px 0px 50px 0px;
+				}
+			}
+			&_info {
+				padding: 0px;
+				background-color: transparent;
+				min-height: initial;
+				h5 {
+					min-height: initial;
+					margin: 0px;
+					line-height: 1;
+				}
+				p {
+					margin-top: 20px;
+				}
+				&_data {
+					color: $orange;
+					margin: 5px 0 0 0;
+				}
+			}
+			&_pagination {
+				.prev, .next {
+					@media #{$mobile} {
+						font-size: 0px;
+						&:before {
+							content: 'назад';
+							width: initial;
+							height: initial;
+							font-size: 19px;
+							border: none;
+							padding: 0px;
+						}
+					}
+					&:after {
+						@media #{$mobile} {
+							display: none;
+						}
+					}
+				}
+				.prev {
+					@media #{$mobile} {
+						&:before {
+							content: 'назад';
+							transform: none;
+						}
+					}
+				}
+				.next {
+					@media #{$mobile} {
+						&:before {
+							content: 'вперед';
+							transform: none;
+							right: 0px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.article {
+	&_quote {
+		margin: 50px 0 40px 0;
+		padding: 30px 40px;
+		background-color: #2e3337;
+		color: $main_color;
+		@media #{$mobile} {
+			padding: 20px;
+			margin: 25px 0 20px 0;
+		}
+		p {
+			line-height: 1.25;
+			@media #{$mobile} {
+				font-size: 18px;
+			}
+		}
+		span {
+			margin-top: 25px;
+			display: inline-block;
+			font-size: 17px;
+			font-weight: 700;
+			@media #{$mobile} {
+				font-size: 15px;
+			}
+		}
+	}
+	&_video {
+		h5 {
+			font-size: 33px;
+			font-weight: 700;
+		}
+		video {
+			background-color: #000;
+			min-height: 515px;
+			width: 100%;
+			margin-bottom: 25px;
+			margin-top: 12px;
+			@media #{$mobile} {
+				margin-bottom: 0px;
+				min-height: 320px;
+			}
+			@media screen and (max-width: 600px) {
+				min-height: 280px;
+			}
+			@media screen and (max-width: 500px) {
+				min-height: 220px;
+			}
+		}
+		p {
+			line-height: 1.33;
+			margin-top: 25px;
+			font-weight: 300;
+			@media #{$mobile} {
+				font-size: 18px;
+			}
+			// font-size: 
+		}
+	}
+}

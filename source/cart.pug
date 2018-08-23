@@ -1,0 +1,105 @@
+extends ./templates/base
+
+block title
+	title Cart
+
+block main
+	.wrapper.wrapper--cart-pg
+		include ./templates/header
+		section.breadcrumb
+			.container
+				.breadcrumb_block
+					ul.clearfix
+						li
+							a(href='./') Главная
+						li.
+							Корзина
+		section.your-sale
+			.container
+				.your-sale_block
+					.your-sale_left
+						p
+							| Ваша скидка составляет
+							span
+								| 2345
+							| руб.
+					.your-sale_right
+						p.
+							Для получения скидки в 4567 руб., необходимо добавить товар на сумму 17 000 руб.
+						a(href="#") Продолжить покупку
+		section.cart-pg
+			.container
+				h2 Корзина
+				.table-responsive
+					table.table
+						thead
+							tr
+								td.table-col-1.table-img
+									p= order
+									p= data
+								td.table-col-2.table-name
+									p.
+										Название
+								td.table-col-3.table-quantity
+									p.
+										Количество
+								td.table-col-4.table-cost
+									p.
+										Цена
+								td.table-col-5.table-total
+									p.
+										Сумма
+								td.table-col-6.table-del
+									p.
+										Удалить
+							tbody
+								mixin tablebody(pic, name, char1, char2, char3, quantity, cost, total)
+									tr
+										td.table-col-1
+											.table-img
+												img(src=require("./components/images/" + pic), alt="")
+										td.table-col-2
+											.table-name
+												h6= name
+												p
+													span= char1
+													br
+													span= char2
+													br
+													span= char3
+										td.table-col-3
+											.table-quantity
+												span.plus +
+												input.input(value='' + quantity, type='')
+												span.minus -
+										td.table-col-4
+											.table-cost
+												p= cost
+													span  руб.
+										td.table-col-5
+											.table-total
+												p= total
+													span  руб.
+										td.table-col-6
+											a(href="#").table-del
+								+tablebody('pic-1.png', 'Колодка Тормозная', 'Код: 6793-3903-34', 'Артикул: 43253-2402011-40', 'Вес: 20 кг', '100', '7203', '7203')
+								+tablebody('pic-2.png', 'Колодка Тормозная', 'Код: 6793-3903-34', 'Артикул: 43253-2402011-40', 'Вес: 20 кг', '1', '7203', '7203')
+								+tablebody('pic-3.png', 'Колодка Тормозная', 'Код: 6793-3903-34', 'Артикул: 43253-2402011-40', 'Вес: 20 кг', '67', '7203', '7203')
+								+tablebody('pic-4.png', 'Колодка Тормозная', 'Код: 6793-3903-34', 'Артикул: 43253-2402011-40', 'Вес: 20 кг', '2', '7203', '7203')
+				mixin ordertotal(totalCost, totalWeight)
+					.cart-pg_total
+						.cart-pg_total-left
+							.cart-pg_total-cost
+								p.
+									Сумма заказа:
+								span= totalCost
+							.cart-pg_total-weight
+								p.
+									Общий вес заказа:
+								span= totalWeight
+						.cart-pg_total-right
+							.cart-pg_total-btn
+								a(href="ordering.html").btn.main-btn.main-btn--black Оформить
+				+ordertotal('14 406 руб.', '100 кг.')
+		include ./templates/viewed
+		include ./templates/footer

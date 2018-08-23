@@ -1,0 +1,280 @@
+.wrapper {
+	&--enter-pg {
+		.enter, .registration {
+			input, textarea {
+				background-color: #f3f4f6;
+			    border: 1px solid #f3f4f6;
+				box-shadow: inset 0px 2px 0px 2px #e6e6e6;
+				border-radius: 40px;
+				padding-right: 32px;
+				padding-left: 32px;
+				font-size: 25px;
+				@include addPrefixPlaceholder(placeholder, font-size, 25px);
+				@include addPrefixPlaceholder(placeholder, color, #bbbec1);
+				&:focus, &:active {
+					outline: none;
+					box-shadow: inset 0px 0px 0px 2px $orange;
+					border-color: transparent;
+				}
+				@media #{$desctop} {
+					font-size: 21px;
+				}
+			}
+			input {
+				width: 500px;
+				height: 80px;
+				@media #{$desctop-lg} {
+					width: 450px;
+				}
+				@media #{$desctop-md} {
+					width: 400px;
+				}
+				@media #{$desctop} {
+					width: 320px;
+				}
+				@media #{$tablet} {
+					width: 500px;
+				}
+				@media #{$mobile} {
+					width: 100%;
+					height: 62px;
+				}
+			}
+			label {
+				font-size: 25px;
+			    padding: 27px 0px;
+				float: left;
+				text-align: left;
+				@media #{$desctop} {
+					font-size: 21px;
+				}
+				@media #{$tablet} {
+					font-size: 25px;
+				}
+				@media #{$mobile} {
+					float: none;
+					padding: 15px 0;
+				}
+				br {
+					@media #{$mobile} {
+						display: none;
+					}
+				}
+			}
+		}
+		// ------------REGISTARTION-------------
+		.registration {
+			background-color: #f3f4f6;
+			padding: 70px 0;
+			&_left {
+				&:after {
+					display: none;
+				}
+			}
+			&_right {
+				padding-left: 0px;
+				.btn {
+					width: 316px;
+					padding-left: 35px;
+					@media #{$mobile} {
+						max-width: 320px;
+						width: 100%;
+						margin-top: 30px;
+					}
+				}
+			}
+			input {
+				background-color: $main_color;
+			}
+		}
+	}
+}
+// ----------------ENTER-------------------
+.enter, .registration {
+	h2 {
+		margin-bottom: 45px;
+	}
+	.form-group {
+		text-align: right;
+		margin-bottom: 20px;
+		@media #{$mobile} {
+			text-align: left;
+		}
+		&--btns {
+			display: flex;
+			align-items: center;
+			padding-top: 30px;
+			@media #{$mobile} {
+				display: block;
+				padding-top: 0px;
+				text-align: center;
+			}
+ 		}
+	}
+	&_left {
+		padding-right: 90px;
+		position: relative;
+		@media #{$desctop-lg} {
+			padding-right: 45px;
+		}
+		@media #{$desctop-md} {
+			padding-right: 35px;
+		}
+		@media #{$desctop} {
+			padding-right: 20px;
+		}
+		@media #{$tablet} {
+			padding-right: 45px;
+		}
+		@media #{$mobile} {
+			padding-right: 0px;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			right: -15px;
+			top: calc(50% - 130px);
+			width: 2px;
+			height: 145px;
+			background-color: #e5e7ea;
+			@media #{$tablet} {
+				display: none;
+			}
+		}
+	}
+	input {
+		display: inline-block;
+	}
+	&-forgot {
+		font-size: 21px;
+		font-weight: 800;
+		display: inline-block;
+		position: relative;
+		@media #{$mobile} {
+			margin-bottom: 20px;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: 0px;
+			height: 1px;
+			width: 100%;
+			background-color: #000;
+		}
+	}
+	.btn {
+		width: 222px;
+		height: 62px;
+		padding: 16px 0px 16px 60px;
+		font-size: 21px;
+		text-transform: none;
+		margin: 0px 0px 0px auto;
+		display: inline-block;
+		@media #{$mobile} {
+			margin: auto;
+			display: block;
+		}
+		&:hover {
+			color: $main_color;
+		}
+		&:before {
+			padding: 6px;
+			right: 30px;
+			top: calc(50% - 7px);
+		}
+		&:after {
+			border-width: 0px 0px 0px 2px;
+			border-radius: 0px;
+			height: 20px;
+			top: 20px;
+			right: 8px;
+		}
+	}
+	.main-btn {
+		&:before, &:after {
+			transition: $main_transition;
+		}
+		&:hover {
+			background-color: $orange;
+			color: #000;
+			&:before, &:after {
+				border-color: #000;
+			}
+		}
+	}
+	&_right {
+		padding-left: 120px;
+		@media #{$desctop-lg} {
+			padding-left: 45px;
+		}
+		@media #{$desctop-md} {
+			padding-left: 30px;
+		}
+		@media #{$tablet} {
+			padding-left: 0px;
+			padding-right: 45px;
+		}
+		@media #{$mobile} {
+			padding-right: 0px;
+		}
+		.enter {
+			&-facebook, &-google {
+				width: 600px;
+				height: 80px;
+				font-size: 25px;
+				margin-bottom: 20px;
+				border-radius: 40px;
+				padding-left: 0px;
+				color: $main_color;
+				padding: 22px 0;
+				@media #{$desctop-lg} {
+					width: 550px;
+				}
+				@media #{$desctop-md} {
+					width: 500px;
+				}
+				@media #{$desctop} {
+					width: 420px;
+				}
+				@media #{$tablet} {
+					width: 500px;
+				}
+				@media #{$mobile} {
+					width: 100%;
+					max-width: 500px;
+					height: 62px;
+					font-size: 21px;
+					padding: 17px 0;
+				}
+			}
+			&-facebook {
+				background-color: #0057a3;
+				// background-color: rgba(0,87,163, 1.0);
+
+				&:hover {
+					// background-color: rgba(0,87,163, 2.0);
+
+					background-color: #063f71;	    
+				}
+			}
+			&-google {
+				background-color: #00b2ff;
+				&:hover {
+					background-color: #169cd6;
+				}
+			}
+		}	
+	}
+}
+.enter {
+	padding: 10px 0 75px 0;
+	&_right {
+		text-align: right;
+		@media #{$tablet} {
+			padding-top: 30px;
+		}
+		@media #{$mobile} {
+			text-align: center;
+		}
+	}
+}

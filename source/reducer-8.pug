@@ -1,0 +1,73 @@
+extends ./templates/base
+
+block title
+	title Подбор редуктора на КАМАЗ
+
+block main
+	.wrapper.wrapper--reducer
+		include ./templates/header
+		section.breadcrumb
+			.container
+				.breadcrumb_block
+					ul.clearfix
+						li
+							a(href='./') Главная
+						li.
+							Подбор редуктора на КАМАЗ
+		section.reducer
+			.container
+				.reducer__head
+					h2 Подбор редуктора на КАМАЗ
+					p.
+						Задача организации, в особенности же новая модель организационной деятельности влечет за собой процесс внедрения и модернизации соответствующий условий активизации. С другой стороны сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации.
+			.reducer__main
+				.reducer__question
+					.container
+						h3 Вопрос №8
+				.container
+					.row
+						.col-sm-6
+							p.
+								Сколько зубов на ведомой цилиндрической шестерне (самая большая шестерня, зубья можно посчитать, т.к. они вне картера редуктора)?
+							.reducer__box
+								.radio
+									label(for='radio') 
+										input(type='radio', name='radio', checked='checked', value='', id='radio')
+										.radio_ok
+										|
+										span 46
+								.radio
+									label(for='radio2') 
+										input(type='radio', name='radio', value='', id='radio2')
+										.radio_ok
+										|
+										span 47
+								.radio
+									label(for='radio3') 
+										input(type='radio', name='radio', value='', id='radio3')
+										.radio_ok
+										|
+										span 48
+								.radio
+									label(for='radio4') 
+										input(type='radio', name='radio', value='', id='radio4')
+										.radio_ok
+										|
+										span 49
+								.radio
+									label(for='radio5') 
+										input(type='radio', name='radio', value='', id='radio5')
+										.radio_ok
+										|
+										span 50
+							.reducer__final
+								span.
+									Редуктор подобран!
+							.reducer__controls
+								a(href="reducer.html").prev Назад
+								a(href="#").buy Купить
+						.col-sm-6
+							.reducer__img
+								img(src=require("./components/images/reducer.png"), alt="")
+		include ./templates/join-us
+		include ./templates/footer

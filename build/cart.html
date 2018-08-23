@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no">
+  <link href="./css/style.css" rel="stylesheet"></head>
+  <body>
+    <div class="wrapper wrapper--cart-pg">
+      <header>
+        <div class="header">
+          <div class="header-top">
+            <div class="container">
+              <div class="header-top_block">
+                <div class="header_hamburger" id="hamburger"><span class="top"></span><span class="mid"></span><span class="bottom"></span></div>
+                <div class="header-top_menu" id="headerMenu">
+                  <div class="header_close" id="close"><span class="top"></span><span class="mid"></span><span class="bottom"></span></div>
+                  <ul>
+                    <li class="current-menu-item"><a href="./">Главная</a></li>
+                    <li><a href="cart.html">Корзина</a></li>
+                    <li><a href="company.html">О компании</a></li>
+                    <li><a href="delivery.html">Оплата и доставка</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="search.html">Поиск</a></li>
+                    <li><a href="blog.html">Новости</a></li>
+                    <li><a href="blog.html">Блог компании</a></li>
+                  </ul>
+                </div>
+                <div class="header-top_right"><a class="log-in" href="enter.html">Войти</a><a class="reg" href="enter.html">Регистрация</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="header-main">
+            <div class="container">
+              <div class="header-main_block">
+                <div class="header-main_logo"><a href="./"></a></div>
+                <div class="header-main_mobcart" id="headerMobCart"></div>
+                <div class="header-main_right">
+                  <ul>
+                    <li>
+                      <div class="header-main_box">
+                        <div class="header-main_img"><i class="fa fa-map-marker"></i></div>
+                        <div class="header-main_info">
+                          <p>Город</p><span>Домодедово</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="header-main_box">
+                        <div class="header-main_img"><i class="fa fa-phone"></i></div>
+                        <div class="header-main_info">
+                          <p>Ежедневно с 9.00 - 21.00</p><span>
+                            <object><a href="tel:+74956662335">+7 (495) 666-23-35</a></object></span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="header-main_box header-cart">
+                        <div class="header-cart_click" id="headerCart"></div>
+                        <div class="header-main_img">
+                          <div class="cart">2</div><i></i>
+                        </div>
+                        <div class="header-main_info">
+                          <h6>Корзина</h6><span>2 товара. 10 000 руб.</span><span>Вес товара: 100 кг</span>
+                        </div>
+                        <div class="header-cart_inner" id="headerCartInner">
+                          <div class="header-cart_head">
+                            <div class="header-cart_shopping-cart"><span></span><i class="cart">2</i></div>
+                            <div class="header-cart_left">
+                              <p>Товары</p>
+                            </div>
+                            <div class="header-cart_right">
+                              <p>Цена</p>
+                            </div>
+                          </div>
+                          <div class="header-cart_body">
+                                                        <div class="header-cart_box">
+                                                          <div class="header-cart_left">
+                                                            <div class="header-cart_img"><img src="images/pic-4.png" alt="img"></div>
+                                                            <div class="header-cart_text">
+                                                              <div class="header-cart_name">
+                                                                <p>Колодка Тормозная Серия 1937С</p>
+                                                              </div>
+                                                              <div class="header-cart_quantity">
+                                                                <p>1 шт.</p>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div class="header-cart_right">
+                                                            <div class="header-cart_price">
+                                                              <p>444 руб.</p>
+                                                            </div>
+                                                            <div class="header-cart_del"></div>
+                                                          </div>
+                                                        </div>
+                                                        <div class="header-cart_box">
+                                                          <div class="header-cart_left">
+                                                            <div class="header-cart_img"><img src="images/pic-2.png" alt="img"></div>
+                                                            <div class="header-cart_text">
+                                                              <div class="header-cart_name">
+                                                                <p>Колодка Тормозная Серия 1937С</p>
+                                                              </div>
+                                                              <div class="header-cart_quantity">
+                                                                <p>100 шт.</p>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div class="header-cart_right">
+                                                            <div class="header-cart_price">
+                                                              <p>1000 руб.</p>
+                                                            </div>
+                                                            <div class="header-cart_del"></div>
+                                                          </div>
+                                                        </div>
+                                                        <div class="header-cart_box">
+                                                          <div class="header-cart_left">
+                                                            <div class="header-cart_img"><img src="images/pic-4.png" alt="img"></div>
+                                                            <div class="header-cart_text">
+                                                              <div class="header-cart_name">
+                                                                <p>Колодка Тормозная Серия 1937С</p>
+                                                              </div>
+                                                              <div class="header-cart_quantity">
+                                                                <p>1 шт.</p>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div class="header-cart_right">
+                                                            <div class="header-cart_price">
+                                                              <p>444 руб.</p>
+                                                            </div>
+                                                            <div class="header-cart_del"></div>
+                                                          </div>
+                                                        </div>
+                          </div>
+                          <div class="header-cart_bottom">
+                            <div class="header-cart_total">
+                              <div class="header-cart_cost">
+                                <p>Всего:</p><span>1888 руб.</span>
+                              </div>
+                              <div class="header-cart_weight">
+                                <p>Общий вес:</p><span>100 кг.												</span>
+                              </div>
+                            </div><a class="btn main-btn main-btn--black" href="#">Оформить</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-bottom">
+            <div class="container">
+              <div class="header-bottom_block"><a class="btn main-btn main-btn--black catalog-btn" href="#">Каталог
+                  <object>
+                    <ul class="header-bottom_dropdown">
+                      <li><a href="category.html">Запчасти КАМАЗ</a></li>
+                      <li><a href="category.html">Запчасти МАЗ</a></li>
+                      <li class="menu-item-has-children"><a href="category.html">Запчасти ЗИЛ</a>
+                        <ul>
+                          <li><a href="category.html">Запчасти КАМАЗ</a></li>
+                          <li><a href="category.html">Запчасти МАЗ</a></li>
+                          <li><a href="category.html">Запчасти ЗИЛ</a></li>
+                        </ul>
+                      </li>
+                      <li class="menu-item-has-children"><a href="category.html">Запчасти УРАЛ</a>
+                        <ul>
+                          <li><a href="category.html">Запчасти КАМАЗ</a></li>
+                          <li><a href="category.html">Запчасти МАЗ</a></li>
+                          <li><a href="category.html">Запчасти ЗИЛ</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="category.html">Запчасти УАЗ</a></li>
+                      <li><a href="category.html">Запчасти ГАЗ</a></li>
+                      <li><a href="category.html">Запчасти ПАЗ</a></li>
+                    </ul>
+                  </object></a>
+                <div class="header__form">
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Введите наименование товара...">
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Введите артикул товара...">
+                  </div>
+                  <button class="btn main-btn main-btn--black" type="submit">Поиск</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="breadcrumb">
+        <div class="container">
+          <div class="breadcrumb_block">
+            <ul class="clearfix">
+              <li><a href="./">Главная</a></li>
+              <li>Корзина</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="your-sale">
+        <div class="container">
+          <div class="your-sale_block">
+            <div class="your-sale_left">
+              <p>Ваша скидка составляет<span>2345</span>руб.</p>
+            </div>
+            <div class="your-sale_right">
+              <p>Для получения скидки в 4567 руб., необходимо добавить товар на сумму 17 000 руб.</p><a href="#">Продолжить покупку</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cart-pg">
+        <div class="container">
+          <h2>Корзина</h2>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <td class="table-col-1 table-img">
+                    <p></p>
+                    <p></p>
+                  </td>
+                  <td class="table-col-2 table-name">
+                    <p>Название</p>
+                  </td>
+                  <td class="table-col-3 table-quantity">
+                    <p>Количество</p>
+                  </td>
+                  <td class="table-col-4 table-cost">
+                    <p>Цена</p>
+                  </td>
+                  <td class="table-col-5 table-total">
+                    <p>Сумма</p>
+                  </td>
+                  <td class="table-col-6 table-del">
+                    <p>Удалить</p>
+                  </td>
+                </tr>
+                <tbody>
+                                    <tr>
+                                      <td class="table-col-1">
+                                        <div class="table-img"><img src="images/pic-1.png" alt=""></div>
+                                      </td>
+                                      <td class="table-col-2">
+                                        <div class="table-name">
+                                          <h6>Колодка Тормозная</h6>
+                                          <p><span>Код: 6793-3903-34</span><br><span>Артикул: 43253-2402011-40</span><br><span>Вес: 20 кг</span></p>
+                                        </div>
+                                      </td>
+                                      <td class="table-col-3">
+                                        <div class="table-quantity"><span class="plus">+</span>
+                                          <input class="input" value="100" type=""><span class="minus">-</span>
+                                        </div>
+                                      </td>
+                                      <td class="table-col-4">
+                                        <div class="table-cost">
+                                          <p>7203<span> руб.</span></p>
+                                        </div>
+                                      </td>
+                                      <td class="table-col-5">
+                                        <div class="table-total">
+                                          <p>7203<span> руб.</span></p>
+                                        </div>
+                                      </td>
+                                      <td class="table-col-6"><a class="table-del" href="#"></a></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="table-col-1">
+                                        <div class="table-img"><img src="images/pic-2.png" alt=""></div>
+                                      </td>
+                                      <td class="table-col-2">
+                                        <div class="table-name">
+                                          <h6>Колодка Тормозная</h6>
+                                          <p><span>Код: 6793-3903-34</span><br><span>Артикул: 43253-2402011-40</span><br><span>Вес: 20 кг</span></p>
+                                        </div>
+                                      </td>
+                                      <td class="table-col-3">
+                                        <div class="table-quantity"><span class="plus">+</span>
+                                          <input class="input" value="1" type=""><span class="minus">-</span>
+                                        </div>
+                                      </td>
+                                      <td class="table-col-4">
+                                        <div class="table-cost">
+                                          <p>7203<span> руб.</span></p>
+                                        </div>
+                                      </td>
+                                      <td class="table-col-5">
+                                        <div class="table-total">
+                                          <p>7203<span> руб.</span></p>
+                                        </div>
+                                      </td>
+                                      <td class="table-col-6"><a class="table-del" href="#"></a></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="table-col-1">
+                                        <div class="table-img"><img src="images/pic-3.png" alt=""></div>
+                                      </td>
+                                      <td class="table-col-2">
+                                        <div class="table-name">
+                                          <h6>Колодка Тормозная</h6>
+                                          <p><span>Код: 6793-3903-34</span><br><span>Артикул: 43253-2402011-40</span><br><span>Вес: 20 кг</span></p>
+                                        </div>
+                                      </td>
+                                      <td class="table-col-3">
+                                        <div class="table-quantity"><span class="plus">+</span>
+                                          <input class="input" value="67" type=""><span class="minus">-</span>
+                                        </div>
+                                      </td>
+                                      <td class="table-col-4">
+                                        <div class="table-cost">
+                                          <p>7203<span> руб.</span></p>
+                                        </div>
+                                      </td>
+                                      <td class="table-col-5">
+                                        <div class="table-total">
+                                          <p>7203<span> руб.</span></p>
+                                        </div>
+                                      </td>
+                                      <td class="table-col-6"><a class="table-del" href="#"></a></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="table-col-1">
+                                        <div class="table-img"><img src="images/pic-4.png" alt=""></div>
+                                      </td>
+                                      <td class="table-col-2">
+                                        <div class="table-name">
+                                          <h6>Колодка Тормозная</h6>
+                                          <p><span>Код: 6793-3903-34</span><br><span>Артикул: 43253-2402011-40</span><br><span>Вес: 20 кг</span></p>
+                                        </div>
+                                      </td>
+                                      <td class="table-col-3">
+                                        <div class="table-quantity"><span class="plus">+</span>
+                                          <input class="input" value="2" type=""><span class="minus">-</span>
+                                        </div>
+                                      </td>
+                                      <td class="table-col-4">
+                                        <div class="table-cost">
+                                          <p>7203<span> руб.</span></p>
+                                        </div>
+                                      </td>
+                                      <td class="table-col-5">
+                                        <div class="table-total">
+                                          <p>7203<span> руб.</span></p>
+                                        </div>
+                                      </td>
+                                      <td class="table-col-6"><a class="table-del" href="#"></a></td>
+                                    </tr>
+                </tbody>
+              </thead>
+            </table>
+          </div>
+                    <div class="cart-pg_total">
+                      <div class="cart-pg_total-left">
+                        <div class="cart-pg_total-cost">
+                          <p>Сумма заказа:</p><span>14 406 руб.</span>
+                        </div>
+                        <div class="cart-pg_total-weight">
+                          <p>Общий вес заказа:</p><span>100 кг.</span>
+                        </div>
+                      </div>
+                      <div class="cart-pg_total-right">
+                        <div class="cart-pg_total-btn"><a class="btn main-btn main-btn--black" href="ordering.html">Оформить</a></div>
+                      </div>
+                    </div>
+        </div>
+      </section>
+      <section class="viewed">
+        <div class="container">
+          <div class="viewed_left">
+            <h6>Вы <br>просматривали</h6>
+            <p>С другой стороны консультация с широким активом позволяет выполнять важные задания</p>
+          </div>
+          <div class="viewed_right">
+            <div class="slider slick-viewed">
+                            <div><a class="slick-viewed_box" href="product-pg.html">
+                                <div class="slick-viewed_img"><img src="images/pic-1.png" alt="photo"></div>
+                                <div class="slick-viewed_name">
+                                  <h6>Колодка тормозная</h6>
+                                </div>
+                                <div class="slick-viewed_char">
+                                  <div class="slick-viewed_code">Код:<span>6793-3903-34</span></div>
+                                  <div class="slick-viewed_mark">Артикул: <span>43253-2402011-40</span></div>
+                                  <div class="slick-viewed_weight">Вес: <span>20 кг</span></div>
+                                </div>
+                                <div class="slick-viewed_cost">
+                                  <p>444 руб.</p>
+                                </div>
+                                <div class="slick-viewed_sale">
+                                  <p>Опт 1:<span>373 руб.</span></p>
+                                  <p>Опт 1:<span>373 руб.</span></p>
+                                </div>
+                                <object><a class="btn main-btn" href="#">В корзину</a></object></a></div>
+                            <div><a class="slick-viewed_box" href="product-pg.html">
+                                <div class="slick-viewed_img"><img src="images/pic-2.png" alt="photo"></div>
+                                <div class="slick-viewed_name">
+                                  <h6>Колодка Тормозная</h6>
+                                </div>
+                                <div class="slick-viewed_char">
+                                  <div class="slick-viewed_code">Код:<span>6793-3903-34</span></div>
+                                  <div class="slick-viewed_mark">Артикул: <span>43253-2402011-40</span></div>
+                                  <div class="slick-viewed_weight">Вес: <span>20 кг</span></div>
+                                </div>
+                                <div class="slick-viewed_cost">
+                                  <p>444 руб.</p>
+                                </div>
+                                <div class="slick-viewed_sale">
+                                  <p>Опт 1:<span>373 руб.</span></p>
+                                  <p>Опт 1:<span>373 руб.</span></p>
+                                </div>
+                                <object><a class="btn main-btn" href="#">В корзину</a></object></a></div>
+                            <div><a class="slick-viewed_box" href="product-pg.html">
+                                <div class="slick-viewed_img"><img src="images/pic-3.png" alt="photo"></div>
+                                <div class="slick-viewed_name">
+                                  <h6>Колодка Тормозная</h6>
+                                </div>
+                                <div class="slick-viewed_char">
+                                  <div class="slick-viewed_code">Код:<span>6793-3903-34</span></div>
+                                  <div class="slick-viewed_mark">Артикул: <span>43253-2402011-40</span></div>
+                                  <div class="slick-viewed_weight">Вес: <span>20 кг</span></div>
+                                </div>
+                                <div class="slick-viewed_cost">
+                                  <p>444 руб.</p>
+                                </div>
+                                <div class="slick-viewed_sale">
+                                  <p>Опт 1:<span>373 руб.</span></p>
+                                  <p>Опт 1:<span>373 руб.</span></p>
+                                </div>
+                                <object><a class="btn main-btn" href="#">В корзину</a></object></a></div>
+                            <div><a class="slick-viewed_box" href="product-pg.html">
+                                <div class="slick-viewed_img"><img src="images/pic-1.png" alt="photo"></div>
+                                <div class="slick-viewed_name">
+                                  <h6>Колодка Тормозная</h6>
+                                </div>
+                                <div class="slick-viewed_char">
+                                  <div class="slick-viewed_code">Код:<span>6793-3903-34</span></div>
+                                  <div class="slick-viewed_mark">Артикул: <span>43253-2402011-40</span></div>
+                                  <div class="slick-viewed_weight">Вес: <span>20 кг</span></div>
+                                </div>
+                                <div class="slick-viewed_cost">
+                                  <p>444 руб.</p>
+                                </div>
+                                <div class="slick-viewed_sale">
+                                  <p>Опт 1:<span>373 руб.</span></p>
+                                  <p>Опт 1:<span>373 руб.</span></p>
+                                </div>
+                                <object><a class="btn main-btn" href="#">В корзину</a></object></a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+<footer>
+  <div class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-top_block">
+          <div class="footer-top_socials">
+            <ul>
+              <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+              <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+              <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+            </ul>
+          </div>
+          <div class="footer-top_menu">
+            <ul>
+              <li><a href="./">Главная</a></li>
+              <li><a href="cart.html">Корзина</a></li>
+              <li><a href="company.html">О компании</a></li>
+              <li><a href="delivery.html">Оплата и доставка</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+              <li><a href="search.html">Поиск</a></li>
+              <li><a href="blog.html">Новости</a></li>
+              <li><a href="blog.html">Блог компании</a></li>
+            </ul>
+          </div>
+          <div class="footer-top_top"><a href="#" onclick="return up()"></a></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-main_block">
+          <ul class="row">
+            <li class="col-md-3 col-sm-6">
+              <div class="footer-main_box">
+                <div class="footer-main_img"><i class="fa fa-map-marker"></i></div>
+                <p>адрес магазина</p><span>город Домодедово</span>
+              </div>
+            </li>
+            <li class="col-md-3 col-sm-6">
+              <div class="footer-main_box">
+                <div class="footer-main_img"><i class="fa fa-envelope"></i></div>
+                <p>отправить вопрос на почту</p><span>
+                  <object><a href="mailto:silacompany@gmail.com">silacompany@gmail.com</a></object></span>
+              </div>
+            </li>
+            <li class="col-md-3 col-sm-6">
+              <div class="footer-main_box">
+                <div class="footer-main_img"><i class="fa fa-phone"></i></div>
+                <p>бесплатная консультация</p><span>
+                  <object><a href="tel:+74956662335">+7 (495) 666-23-35</a></object></span>
+              </div>
+            </li>
+            <li class="col-md-3 col-sm-6"><a class="footer-main_box" href="cart.html">
+                <div class="footer-main_img">
+                  <div class="cart">2</div><i></i>
+                </div>
+                <p>корзина</p><span>2 товара. 10 000 руб.</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom_block">
+          <div class="footer-bottom_copyright">
+            <p>ООО «Сила».  Запчасти для грузового транспорта и оптовые поставки топлива</p>
+          </div><a class="footer-bottom_production" href="https://unitspace.top" target="_blank">Разработка и создание сайтов Киев, Харьков</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  var t;
+  function up(e) {
+  	var top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+  	if(top > 0) {
+  		window.scrollBy(0, -100);
+  		t = setTimeout('up()', 20);
+  	} else clearTimeout(t);
+  	return false;
+  }
+</script>
+    </div>
+  <script type="text/javascript" src="js/bundle.js"></script></body>
+</html>

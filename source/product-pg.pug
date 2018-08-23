@@ -1,0 +1,100 @@
+extends ./templates/base
+
+block title
+	title Product page
+
+block main
+	.wrapper.wrapper--product-pg
+		include ./templates/header
+		section.breadcrumb
+			.container
+				.breadcrumb_block
+					ul.clearfix
+						li
+							a(href='./') Главная
+						li
+							a(href='category.html') Запчасти КАМАЗ
+						li.
+							Тормозные колодки
+		section.product-pg
+			.container
+				.row
+					.col-md-6.col-lg-7
+						.product-pg_left
+							.product-pg_slider-nav
+								.slider.slick-nav
+									mixin slick-nav(img)
+										div
+											.slick-nav_box
+												.slick-nav_img(style='background-image: url(' + require('./components/images/' + img) + ')')
+									+slick-nav('banner-pic-1.png')
+									+slick-nav('pic-3.png')
+									+slick-nav('pic-4.png')
+									+slick-nav('banner-pic-1.png')
+									+slick-nav('pic-3.png')
+									+slick-nav('pic-4.png')
+							.product-pg_slider-for
+								.slider.slick-for
+									mixin slick-for(img)
+										div
+											.slick-for_box
+												.slick-for_img(style='background-image: url(' + require('./components/images/' + img) + ')')
+									+slick-for('banner-pic-1.png')
+									+slick-for('pic-3.png')
+									+slick-for('pic-4.png')
+									+slick-for('banner-pic-1.png')
+									+slick-for('pic-3.png')
+									+slick-for('pic-4.png')
+					.col-md-6.col-lg-5
+						.product-pg_right
+							.product-pg_name
+								h5 Колодка Тормозная CHKW LT 1038
+							//- .product-pg_has
+							.product-pg_hasnot
+							.product-pg_about
+								.product-pg_code Код:
+									span 6793-3903-34
+								.product-pg_mark Артикул: 
+									span 43253-2402011-40
+								.product-pg_weight Вес: 
+									span 20 кг
+							.product-pg_info
+								p.
+									Идейные соображения высшего порядка, а также пос информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение новых предложений.
+							.product-pg_char
+								h6 Характеристики:
+								ul
+									li
+										p Тип:
+										span Лорем
+									li
+										p Страна изготовителя:
+										span Лорем
+									li
+										p Модель:
+										span Лорем
+									li
+										p Мощность:
+										span Лорем
+								a(href="#") Подробнее
+							.product-pg_weight-bottom
+								.weight
+									span Вес:
+										i 30 кг
+								.product-pg_quantity
+									span.plus +
+									input.input(value='1', type='')
+									span.minus -
+							.product-pg_bottom
+								.product-pg_cost
+									p 444 руб.
+								.product-pg_sale
+									p Опт 1:
+										span 373 руб.
+									p Опт 1:
+										span 373 руб.
+								a(href="#").btn.main-btn В корзину
+		include ./templates/sales
+		include ./templates/blog-block
+		include ./templates/join-us
+		include ./templates/footer

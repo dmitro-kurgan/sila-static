@@ -1,0 +1,86 @@
+footer
+	.footer
+		.footer-top
+			.container
+				.footer-top_block
+					.footer-top_socials
+						ul
+							li
+								a(href="#")
+									span.fa.fa-twitter
+							li
+								a(href="#")
+									span.fa.fa-instagram
+							li
+								a(href="#")
+									span.fa.fa-facebook
+					.footer-top_menu
+						ul
+							li
+								a(href="./") Главная
+							li
+								a(href="cart.html") Корзина
+							li
+								a(href="company.html") О компании
+							li
+								a(href="delivery.html") Оплата и доставка
+							li
+								a(href="contacts.html") Контакты
+							li
+								a(href="search.html") Поиск
+							li
+								a(href="blog.html") Новости
+							li
+								a(href="blog.html") Блог компании
+					.footer-top_top
+						a(href="#" onclick='return up()')
+		.footer-main
+			.container
+				.footer-main_block
+					ul.row
+						li.col-md-3.col-sm-6
+							.footer-main_box
+								.footer-main_img
+									i.fa.fa-map-marker
+								p адрес магазина
+								span город Домодедово
+						li.col-md-3.col-sm-6
+							.footer-main_box
+								.footer-main_img
+									i.fa.fa-envelope
+								p отправить вопрос на почту
+								span
+									object
+										a(href="mailto:silacompany@gmail.com") silacompany@gmail.com
+						li.col-md-3.col-sm-6
+							.footer-main_box
+								.footer-main_img
+									i.fa.fa-phone
+								p бесплатная консультация
+								span
+									object
+										a(href="tel:+74956662335") +7 (495) 666-23-35
+						li.col-md-3.col-sm-6
+							a(href="cart.html").footer-main_box
+								.footer-main_img
+									.cart 2
+									i
+								p корзина
+								span 2 товара. 10 000 руб.
+		.footer-bottom
+			.container
+				.footer-bottom_block
+					.footer-bottom_copyright
+						p.
+							ООО «Сила».  Запчасти для грузового транспорта и оптовые поставки топлива
+					a(href="https://unitspace.top", target="_blank").footer-bottom_production Разработка и создание сайтов Киев, Харьков
+script.
+	var t;
+	function up(e) {
+		var top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+		if(top > 0) {
+			window.scrollBy(0, -100);
+			t = setTimeout('up()', 20);
+		} else clearTimeout(t);
+		return false;
+	}

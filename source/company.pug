@@ -1,0 +1,57 @@
+extends ./templates/base
+
+block title
+	title Company
+
+block main
+	.wrapper.wrapper--company
+		include ./templates/header
+		section.breadcrumb
+			.container
+				.breadcrumb_block
+					ul.clearfix
+						li
+							a(href='./') Главная
+						li.
+							Оплата и доставка
+		section.company
+			.company-about.container
+				.company_banner(style='background-image: url(' + require('./components/images/company-banner.jpg') + ')')
+				h2 О нашей компании
+				.row
+					.company-about_left.col-sm-8
+						p.
+							Общество с ограниченной ответственностью "Сила" - это мы, активная и живая торговая организация. Нашим профилем является оптовая торговля запасными частями, снабжение автотранспортных предприятий, розничных магазинов и оптовых фирм деталями для отечественной коммерческой техники: КАМАЗ, МАЗ, ЗИЛ, ГАЗ и УАЗ, спецтехника, трактора. Мы рассматриваем как малые заявки в несколько единиц, необходимые для ремонта одного конкретного автомобиля, так и полномасштабные крупные заказы, составленные исходя из потребностей десятков гаражей, сервисов, ремонтных баз.
+					.company-about_right.col-sm-4
+						.company-about_start
+							p 2014
+							span год создания
+						.company-about_team
+							p 120
+							span человек в нашей команде
+			.company-team.container
+				h2 Наша команда
+				mixin teambox(pic, name, post, tel, linktel, email, linkemail)
+					.company-team_box
+						.company-team_img(style='background-image: url(' + require('./components/images/' + pic) + ')')
+						.company-team_name= name
+						.company-team_post= post
+						.company-team_tel
+							span
+								i.fa.fa-phone
+							a(href="" + linktel)= tel
+						.company-team_email
+							span
+								i.fa.fa-envelope
+							a(href="" + linkemail)= email
+				+teambox('team-1.jpg', 'Егоров Михаил Александрович', 'Генеральный директор' , '+7 (495) 666-23-35', 'tel:+74956662335', 'egorov@zapsila.ru', 'mailto:egorov@zapsila.ru')
+				+teambox('team-2.jpg', 'Егоров Михаил Александрович', 'Бухгалтер' , '+7 (495) 666-23-35', 'tel:+74956662335', 'office@zapsila.ru', 'mailto:office@zapsila.ru')
+				+teambox('team-1.jpg', 'Мироненко Кирилл Александрович', 'Руководитель отдела продаж' , '+7 (495) 666-23-35', 'tel:+74956662335', 'k.mironenko@zapsila.ru', 'mailto:k.mironenko@zapsila.ru')
+				+teambox('team-2.jpg', 'Синанович Дэниэл Эсадович', 'Коммерческий представитель в г.Воронеж' , '+7 (920) 457-32-70', 'tel:+74956662335', ' d.sinanovich@zapsila.ru', 'mailto:d.sinanovich@zapsila.ru')
+
+				+teambox('team-1.jpg', 'Егоров Михаил Александрович', 'Генеральный директор' , '+7 (495) 666-23-35', 'tel:+74956662335', 'egorov@zapsila.ru', 'mailto:egorov@zapsila.ru')
+				+teambox('team-2.jpg', 'Егоров Михаил Александрович', 'Бухгалтер' , '+7 (495) 666-23-35', 'tel:+74956662335', 'office@zapsila.ru', 'mailto:office@zapsila.ru')
+				+teambox('team-1.jpg', 'Мироненко Кирилл Александрович', 'Руководитель отдела продаж' , '+7 (495) 666-23-35', 'tel:+74956662335', 'k.mironenko@zapsila.ru', 'mailto:k.mironenko@zapsila.ru')
+				+teambox('team-2.jpg', 'Синанович Дэниэл Эсадович', 'Коммерческий представитель в г.Воронеж' , '+7 (920) 457-32-70', 'tel:+74956662335', ' d.sinanovich@zapsila.ru', 'mailto:d.sinanovich@zapsila.ru')
+		include ./templates/join-us
+		include ./templates/footer

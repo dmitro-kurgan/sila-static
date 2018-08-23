@@ -1,0 +1,391 @@
+.wrapper {
+	&--product-pg {
+
+	}
+}
+.product-pg {
+	padding: 45px 0 110px 0;
+	@media #{$desctop} {
+	    padding: 25px 0 60px 0;
+	}
+	$heightSlider: 650px;
+	@media #{$desctop} {
+		$heightSlider: 575px;
+	}
+	&_left {
+		min-height: $heightSlider;
+		position: relative;
+		display: flex;
+		align-items: center;
+		@media #{$mobile} {
+			min-height: initial;
+			padding: 20px 0;
+		}
+	}
+	&_slider {
+		&-for {
+			width: 100%;
+			padding-left: 140px;
+			@media #{$desctop} {
+			    padding-left: 170px;
+			}
+			@media #{$mobile} {
+				padding-left: 0px;
+			}
+		}
+		&-nav {
+			position: absolute;
+			// z-index: 10;
+			// left: calc(0px - 250px);
+			left: 0px;
+			top: calc(0px + 25px);
+			// width: $heightSlider;
+			width: 140px;
+			// height: 150px;
+			@media #{$desctop} {
+				width: 122px;
+				// left: calc(0px - 225px);
+			}
+			@media #{$mobile} {
+				display: none;
+			}
+		}
+	}
+	&_right {
+		min-height: $heightSlider;
+	}
+	&_name {
+		font-size: 25px;
+		font-weight: 700;
+	}
+	&_has, &_hasnot {
+		color: $orange;
+		font-size: 21px;
+		font-weight: 700;
+		position: relative;
+	    height: 21px;
+		width: 100%;
+		padding-left: 22px;
+		margin: 10px 0 30px 0;
+		@media #{$desctop} {
+			margin: 10px 0 20px 0;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: 4px;
+			left: 0px;
+			width: 10px;
+			height: 10px;
+			background-color: $orange;
+			border-radius: 50%;
+		}
+		&:after {
+			content: 'В наличии';
+			position: absolute;
+		}
+	}
+	&_hasnot {
+		color: #7d9fcf;
+		&:before {
+			background-color: #7d9fcf;
+		}
+		&:after {
+			content: 'Под заказ';
+		}
+	}
+	&_code, &_mark, &_weight {
+		span {
+			color: #727272;
+			margin-left: 2px;
+			display: inline-block;
+		}
+	}
+	&_about {
+
+	}
+	&_code {
+
+	}
+	&_weight-bottom {
+		padding-top: 30px;
+		.weight {
+			display: inline-block;
+			vertical-align: middle;
+			span {
+				font-size: 31px;
+				font-weight: 700;
+			}
+			i {
+				color: #bcbcbc;
+				margin-left: 5px;
+			}
+		}
+	}
+	&_sale {
+		margin-top: 10px;
+		p {
+			font-size: 21px;
+			font-weight: 700;
+			color: #919191;
+			margin-bottom: 3px;
+			text-transform: uppercase;
+			@media #{$desctop-lg} {
+				font-size: 16px;
+			}
+
+		}
+		span {
+			color: #000;
+			font-size: 26px;
+			font-weight: 400;
+			display: inline-block;
+			margin-left: 5px;
+			text-transform: none;
+			@media #{$desctop-lg} {
+				font-size: 21px;
+			}
+			@media #{$desctop-md} {
+				font-size: 18px;
+			}
+		}
+	}
+	&_info {
+		padding: 40px 0;
+		@media #{$desctop} {
+			padding: 20px 0;
+		}
+		p {
+			color: #727272;
+			line-height: 1.15;
+		}
+	}
+	&_char {
+		h6 {
+			font-weight: 700;
+		}
+		ul {
+			margin-top: 25px;
+			li {
+				margin-top: 10px;
+				p, span {
+					display: inline-block;
+				}
+				p {
+					width: 250px;
+					color: #7f7f7f;
+				}
+				span {
+					@media #{$mobile} {
+						margin-top: 10px;
+					}
+				}
+			}
+		}
+		a {
+			margin-top: 15px;
+			display: inline-block;
+			position: relative;
+			padding-right: 17px;
+			&:after {
+				content: '';
+				position: absolute;
+				top: 4px;
+				right: 0px;
+				width: 0px;
+				height: 0px;
+				border: solid #000;
+				border-width: 0px 2px 2px 0px;
+				padding: 4px;
+				@include addPrefix(transform, rotate(45deg));
+			}
+		}
+	}
+	&_bottom {
+		margin-top: 35px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media #{$desctop} {
+			margin-top: 35px;
+		}
+		@media #{$mobile} {
+			display: block;
+		}
+		.main-btn {
+			height: 62px;
+			width: 215px;
+			font-weight: 800;
+			font-size: 16px;
+			background-color: $orange;
+			border-radius: 35px;
+			padding-left: 42px;
+			padding-right: 42px;
+			padding-top: 21px;
+			padding-bottom: 21px;
+			color: #000;
+			// transition: width .3s ease 0s, color .4.5s ease .05s;
+			@media #{$desctop-md} {
+				width: 185px;
+				padding-left: 25px;
+				padding-right: 25px;
+			}
+			@media #{$desctop} {
+				width: 180px;
+				padding-left: 25px;
+			}
+			&:after {
+				background-color: $main_color;
+				border-color: $main_color;
+				top: 8px;
+				right: 8px;
+				width: 44px;
+				height: 44px;
+			}
+			&:before {
+				content: '+';
+				color: #000;
+				font-size: 17px;
+				font-weight: 800;
+				z-index: 1;
+				line-height: 1;
+				padding: 0px;
+				width: initial;
+				height: initial;
+				border: none;
+				transform: initial;
+				right: 24px;
+				top: calc(50% - 7px);
+			}
+		}
+	}
+	&_cost {
+		@media #{$mobile} {
+			display: inline-block;
+		}
+		p {
+			font-size: 42px;
+			font-weight: 800;
+			position: relative;
+			@media #{$desctop-lg} {
+				font-size: 34px;
+			}
+			@media #{$desctop-md} {
+				font-size: 28px;
+			}
+			// @media #{$desctop} {
+			// 	font-size: 32px;
+			// }
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0px;
+				bottom: -8px;
+				height: 3px;
+				width: 100%;
+				background-color: $orange;
+			}
+		}
+		span {
+			display: block;
+			margin-top: 15px;
+			font-size: 37px;
+			font-weight: 700;
+			@media #{$desctop-md} {
+				font-size: 28px;
+			}
+			@media #{$desctop} {
+				font-size: 24px;
+			}
+			i {
+				color: #bcbcbc;
+				margin-left: 6px;
+				position: relative;
+				top: 1px;
+			}
+		}
+	}
+	&_quantity {
+		border: 3px solid #dededf;
+		height: 48px;
+		padding: 11px 0;
+		width: 93px;
+		display: inline-block;
+		margin-left: 130px;
+		text-align: center;
+		border-radius: 22px;
+		direction: rtl;
+		@media #{$mobile} {
+			margin: 25px 0;
+		}
+		span, input {
+			display: inline-block;
+			text-align: center;
+			height: 100%;
+			vertical-align: middle;
+			font-size: 21px;
+			font-weight: 700;
+		}
+		span {
+			cursor: pointer;
+			color: #b8b8b8;
+			transition: $main_transition;
+			&:hover {
+				color: #000;
+			}
+		}
+		input {
+			width: 40px;
+			border: none;
+		}
+	}
+}
+// -------------SLIDER-------------
+.slick {
+	&-nav, &-for {
+		.slick-slide {
+			&:focus, &:active {
+				outline: none;
+			}
+		}
+	}
+	&-for {
+		&_img {
+			min-height: 300px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			@media #{$mobile} {
+				min-height: 250px;
+			}
+		}
+	}
+	&-nav {
+		$heightSliderBox: 140px;
+		$paddingSliderBox: 10px; 
+		&_box {
+			margin: auto auto 30px;
+			width: 140px;
+			height: 150px;
+			border: 2px solid transparent;
+			padding: 10px;
+			cursor: pointer;
+			@media #{$desctop} {
+			    width: 120px;
+			    height: 130px;
+			}
+			// @include addPrefix(transform, rotate(-90deg));
+		}
+		&_img {
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			height: $heightSliderBox - ($paddingSliderBox * 2);
+		}
+		.slick-current {
+			.slick-nav_box {
+				border: 2px solid #dddddd;
+			}
+		}
+	}
+}

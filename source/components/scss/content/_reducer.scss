@@ -1,0 +1,257 @@
+.wrapper {
+	&--reducer {
+
+	}
+}
+.reducer {
+	&__head {
+		padding: 40px 0 60px 0;
+		@media #{$mobile} {
+			padding: 20px 0 40px 0;
+		}
+		h2 {
+			font-size: 42px;
+			margin-bottom: 20px;
+			@media #{$mobile} {
+				font-size: 32px;
+			}
+		}
+		p {
+			font-size: 25px;
+			color: #adafb2;
+			@media #{$mobile} {
+				font-size: 21px;
+				line-height: 1.25;
+			}
+		}
+	}
+	&__question {
+		background-color: #f3f4f6;
+		padding: 20px 0;
+		h3 {
+			color: #a8a8a8;
+			font-size: 33px;
+			font-weight: 700;
+			@media #{$mobile} {
+				font-size: 28px;
+			}
+		}
+	}
+	&__main {
+		padding-bottom: 90px;
+		p {
+			font-size: 25px;
+			margin: 25px 0 0 0;
+			@media #{$mobile} {
+				font-size: 21px;
+				line-height: 1.25;
+			}
+		}
+		.radio {
+			padding-top: 4px;
+			padding-bottom: 12px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			label {
+				font-size: 25px;
+				padding-left: 0px;
+				@media #{$desctop-lg} {
+					font-size: 21px;
+				}
+				@media #{$desctop-md} {
+					font-size: 18px;
+				}
+				@media #{$desctop} {
+					font-size: 15px;
+				}
+				span {
+					display: inline-block;
+				    vertical-align: middle;
+				    @media #{$mobile} {
+				    	font-size: 21px;
+				    }
+				}
+			}
+			&_ok {
+				position: relative;
+				width: 28px;
+				height: 28px;
+				display: inline-block;
+				vertical-align: sub;
+				margin-right: 10px;
+				@media #{$mobile} {
+					top: 2px;
+				}
+				&:before {
+					content: '';
+					position: absolute;
+					width: 28px;
+					height: 28px;
+					top: 2px;
+					left: 0px;
+					border-radius: 50%;
+					border: 3px solid #d1d1d1;
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					top: 4px;
+					left: 0px;
+					right: 0px;
+					bottom: 0px;
+					width: 12px;
+					height: 12px;
+					border-radius: 50%;
+					background-color: $orange;
+					opacity: 0;
+					margin: auto;
+					transition: $main_transition;
+				}
+			}
+			input {
+				position: absolute;
+				z-index: -1;
+				opacity: 0;
+				margin: 10px 0 0 7px;
+				&:checked + .radio_ok:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&__final {
+		padding-bottom: 20px;
+		border-bottom: 3px solid #e5e7ea;
+		margin-bottom: 25px;
+		span {
+			color: #878787;
+			font-size: 29px;
+		}
+	}
+	&__box {
+		padding: 50px 0 30px 35px;
+		@media #{$mobile} {
+			padding: 20px 0px 20px 20px;
+		}
+		.radio {
+			margin-top: 0px;
+			margin-bottom: 20px;
+			@media #{$mobile} {
+				margin-bottom: 0px;
+			}
+		}
+	}
+	&__controls {
+		a {
+			width: 165px;
+			height: 51px;
+			border-radius: 25.5px;
+			font-weight: 800;
+			font-size: 25px;
+			text-decoration: underline;
+			position: relative;
+			padding: 13px 0;
+			display: inline-block;
+			text-align: center;
+			transition: $main_transition;
+			@media #{$mobile} {
+				width: 100px;
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				top: 22px;
+				width: 0px;
+				height: 0px;
+				padding: 4px;
+				border-color: #000;
+				border-style: solid;
+				border-width: 0px 2px 2px 0px;
+				transition: $main_transition;
+
+			}
+			&:hover {
+				color: #ffad2e;
+				box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.15);
+				&:after {
+					border-color: #ffad2e;
+				}
+			}
+		}
+
+		.prev {
+			&:after {
+				left: 20px;
+				@include addPrefix (transform, rotate(135deg));
+				@media #{$mobile} {
+					left: 0px;
+				}
+			}
+		}
+		.next {
+			margin-left: 75px;
+			&:after {
+				right: 20px;
+				@include addPrefix (transform, rotate(-45deg));
+				@media #{$mobile} {
+					right: -8px;
+				}
+			}
+		}
+		.buy {
+			width: 211px;
+			height: 62px;
+			border-radius: 31px;
+			background-color: #ffad2e;
+			font-size: 25px;
+			font-weight: 400;
+			text-decoration: none;
+			color: #000;
+			padding: 18px 0;
+			padding-right: 20px;
+			float: right;
+			@media #{$tablet} {
+				height: 52px;
+				padding: 14px 20px 14px 0px;
+				width: 175px;
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				top: 21px;
+				right: 50px;
+				width: 2px;
+				height: 20px;
+				background-color: #000;
+				transition: $main_transition;
+				@media #{$mobile} {
+					top: 17px;
+				}
+			}
+			&:after {
+			    top: 24px;
+				right: 35px;
+				padding: 6px;
+				@include addPrefix (transform, rotate(-45deg));
+				@media #{$mobile} {
+					top: 20px;
+				}
+			}
+			&:hover {
+				background-color: #000;
+				&:before {
+					background-color: #ffad2e;
+				}
+			}
+		}
+	}
+	&__img {
+		margin-top: 25px;
+		@media #{$mobile} {
+			display: none;
+		}
+		img {
+			display: block;
+		}
+	}
+}

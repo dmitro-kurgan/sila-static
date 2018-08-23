@@ -1,0 +1,47 @@
+extends ./templates/base
+
+block title
+	title Подбор редуктора на КАМАЗ
+
+block main
+	.wrapper.wrapper--reducer
+		include ./templates/header
+		section.breadcrumb
+			.container
+				.breadcrumb_block
+					ul.clearfix
+						li
+							a(href='./') Главная
+						li.
+							Подбор редуктора на КАМАЗ
+		section.reducer
+			.container
+				.reducer__head
+					h2 Подбор редуктора на КАМАЗ
+					p.
+						Задача организации, в особенности же новая модель организационной деятельности влечет за собой процесс внедрения и модернизации соответствующий условий активизации. С другой стороны сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации.
+			.reducer__main
+				.reducer__question
+					.container
+						h3 Вопрос №1
+				.container
+					p Есть ли на редукторе МКБ (межколесная блокировка)?
+					.reducer__box
+						.radio
+							label(for='radio') 
+								input(type='radio', name='radio', checked='checked', value='', id='radio')
+								.radio_ok
+								|
+								span Да
+						.radio
+							label(for='radio2') 
+								input(type='radio', name='radio', value='', id='radio2')
+								.radio_ok
+								|
+								span Нет
+					.reducer__controls
+						a(href="#").prev Назад
+						a(href="reducer-8.html").next Дальше
+
+		include ./templates/join-us
+		include ./templates/footer

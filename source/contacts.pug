@@ -1,0 +1,127 @@
+extends ./templates/base
+
+block title
+	title Contacts
+
+block main
+	.wrapper.wrapper--contacts
+		include ./templates/header
+		section.breadcrumb
+			.container
+				.breadcrumb_block
+					ul.clearfix
+						li
+							a(href='./') Главная
+						li.
+							Контакты
+		section.map
+			.map_block#map
+			.map_links
+				ul
+					li
+						.map_links_img
+							img(src=require("./components/images/yandex.png"), alt="yandex")
+						a(href="#") Открыть яндекс карту в новом окне
+					li
+						.map_links_img
+							img(src=require("./components/images/google.png"), alt="google")
+						a(href="#") Открыть гугл карту в новом окне
+					li
+						.map_links_img
+							img(src=require("./components/images/download.png"), alt="download")
+						a(href="#") Скачать схему проезда
+		section.address.container
+			.address_block
+				ul.row
+					li.col-sm-3
+						.address_box
+							.address_img
+								i.fa.fa-map-marker
+							p Адрес
+							ul
+								li.
+									142032, Московская область,
+								li.
+									г.Домодедово, п.ГПЗ Константиново,
+								li.
+									Объездное шоссе, строение 6,
+								li.
+									Оптовая база "Агроресурс", Склад №10
+					li.col-sm-3
+						.address_box
+							.address_img
+								i.fa.fa-phone
+							p Телефон
+							ul
+								li
+									a(href="tel:+74956662355") +7(495)666-23-35
+								li.
+									(многоканальный)
+					li.col-sm-3
+						.address_box
+							.address_img
+								img(src=require("./components/images/telegram.png"), width="21px", height="19px", alt="")
+								//- i
+							.address_img
+								img(src=require("./components/images/viber.png"), width="26px", height="28px", alt="")
+								//- i
+							.address_img
+								img(src=require("./components/images/whatsapp.png"), width="25px", height="24px", alt="")
+								//- i
+							p Мы в сетях
+							ul
+								li
+									a(href="tel:+74956662335") +7 (495) 666-23-35 (Telegram)
+								li
+									a(href="tel:+7495666233") +7 (495) 666-23-3 (Viber)
+								li
+									a(href="tel:+74956662335") +7 (495) 666-23-35 (WhatsApp)		
+					li.col-sm-3
+						.address_box
+							.address_img
+								i.fa.fa-envelope
+							p E-mail
+							ul
+								li
+									a(href="mailto:info@zapsila.ru") info@zapsila.ru
+									
+								li
+									a(href="mailto:info@zapsila.ru") info@zapsila.ru
+		section.contact-form
+			.container
+				.row
+					.col-md-3
+						.contact-form__text
+							h6 Свяжитесь с нами
+							p.
+								С другой стороны консультация с широким активом позволяет выполнять важны задания
+						.contact-form__socials
+							p.
+								Мы в социальных сетях:
+							ul
+								li
+									a(href="#")
+										span.fa.fa-twitter
+								li
+									a(href="#")
+										span.fa.fa-instagram
+								li
+									a(href="#")
+										span.fa.fa-facebook
+					.col-md-9
+						form
+							.row
+								.form-group.col-sm-6
+									input(type='text', placeholder='Имя').form-control
+								.form-group.col-sm-6
+									input(type='tel', placeholder='Номер телефона').form-control
+								.form-group.col-sm-6
+									input(type='text', placeholder='E-mail адрес').form-control
+								.form-group.col-sm-6
+									input(type='text', placeholder='Город').form-control
+								.form-group.col-xs-12
+									textarea(type='text', rows='7', placeholder='Сообщение')
+								.form-group.col-xs-12
+									button(type='submit').btn.main-btn.main-btn--black Отправить
+		include ./templates/join-us
+		include ./templates/footer

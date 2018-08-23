@@ -1,0 +1,39 @@
+.wrapper {
+	&--text-pg {
+
+	}
+}
+.text-pg {
+	padding: 50px 0 115px 0;
+	@media #{$mobile} {
+		padding: 50px 0;
+	}
+	&_img {
+		min-height: 550px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		margin: 45px 0 60px 0;
+	}
+	h2, p {
+		font-weight: 300;
+	}
+	h2 {
+		font-size: 47px;
+		line-height: 1;
+		margin-bottom: 20px;
+		@media #{$mobile} {
+			font-size: 38px;
+		}
+	}
+	p {
+		font-size: 25px;
+		line-height: 1.25;
+		@media #{$mobile} {
+			font-size: 21px;
+		}
+	}
+	p + p {
+		margin-top: 30px;
+	}
+}

@@ -1,0 +1,230 @@
+extends ./templates/base
+
+block title
+	title Ordering
+
+block main
+	.wrapper.wrapper--ordering
+		include ./templates/header
+		section.breadcrumb
+			.container
+				.breadcrumb_block
+					ul.clearfix
+						li
+							a(href='./') Главная
+						li
+							a(href='cart.html') Корзина
+						li.
+							Оформление заказа
+		section.your-sale
+			.container
+				.your-sale_block
+					.your-sale_left
+						p
+							| Ваша скидка составляет
+							span
+								| 2345
+							| руб.
+					.your-sale_right
+						p.
+							Для получения скидки в 4567 руб., необходимо добавить товар на сумму 17 000 руб.
+						a(href="#") Продолжить покупку
+		section.ordering
+			form
+				.container
+					h2 Оформление заказа
+					.row
+						.col-md-6
+							.ordering-top
+								.ordering-top_left
+									.ordering-top_order
+										mixin ordering-top_box(img, name, quantity, code, mark, weight, price)
+											.ordering-top_box.clearfix
+												ul
+													li
+														.ordering-top_img
+															img(src=require("./components/images/" + img), alt="img")
+													li
+														.ordering-top_name= name
+															span= quantity
+														.ordering-top_info
+															.ordering-top_code Код:
+																span=code
+															.ordering-top_mark Артикул:
+																span= mark
+															.ordering-top_weight Вес:
+																span= weight
+													li
+														.ordering-top_price= price
+										+ordering-top_box('pic-4.png', 'Колодка Тормозная', '(1 шт.)', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+										+ordering-top_box('pic-4.png', 'Колодка Тормозная', '(2 шт.)', '6793-3903-34', '43253-2402011-40', '20 кг', '100 руб.')
+										+ordering-top_box('pic-4.png', 'Колодка Тормозная', '(5 шт.)', '6793-3903-34', '43253-2402011-40', '20 кг', '10000 руб.')
+							.ordering-mid
+								.ordering-mid_left
+									h3 Итого
+									ul
+										li
+											p 3 товара на сумму
+											span 10544 руб.
+										li
+											p Стоимость доставки
+											span 100 руб.
+										li.total
+											p К оплате:
+											span 10644 руб.
+							.ordering-bottom
+								.ordering-bottom_left
+									.ordering_title
+										h3 Покупатель
+										a(href="enter.html") Я зарегистрирован
+									.ordering-bottom_reg
+										p.
+											Зарегистрироваться
+										.radio
+											label(for='yes') 
+												input(type='radio', name='reg', checked='checked', value='', id='yes')
+												.radio_ok
+												|
+												span Да
+										.radio
+											label(for='no') 
+												input(type='radio', name='reg', value='', id='no')
+												.radio_ok
+												|
+												span Нет
+									.form-group
+										label(for='email').required
+											|
+											span E-mail
+											input(type='text', name='email', id='email', required).form-control
+									.form-group
+										label(for='pwrd')
+											|
+											span Пароль
+											input(type='text', name='pwrd', id='pwrd').form-control
+									.form-group
+										label(for='repwrd')
+											|
+											span Подтвердите пароль
+											input(type='text', name='repwrd', id='repwrd').form-control
+									.form-group
+										label(for='tel').required
+											|
+											span Телефон
+											input(type='text', name='tel', id='tel', required).form-control
+									.ordering-bottom_req
+										h3 Прикрепить реквизиты
+										textarea(id='req', placeholder='Указать реквизиты компании').form-control
+						.col-md-6
+							.ordering-top
+								.ordering-top_right
+									.ordering-top_delivery
+										h3 Доставка
+										mixin radio(label, group, id, name)
+											li
+												.radio
+													label(for='' + label)
+														input(type='radio', name='' + group, value='', id='' + id)
+														.radio_ok
+														| 
+														span= name
+										ul.clearfix
+											li
+												.radio
+													label(for='radio1') 
+														input(type='radio', name='delivery', checked='checked', value='', id='radio1')
+														.radio_ok
+														|
+														span Почта России
+											+radio('radio2', 'delivery', 'radio2', 'Доставка курьера')
+											+radio('radio3', 'delivery', 'radio3', 'Самовывоз из точки выдачи')
+											+radio('radio4', 'delivery', 'radio4', 'Доставка курьера 2')
+											li
+												.radio#radioDelivery
+													label(for='radiodel')
+														input(type='radio', name='delivery', value='', id='radiodel')
+														.radio_ok
+														|
+														span Доставка по  Москве
+									.ordering-top_map
+										.ordering-top_map-img
+											img(src=require("./components/images/map.png"), alt="")
+										.ordering-top_map-btns
+											p Доставка:
+											ul.clearfix
+												+radio('radioMoscow1', 'radioDelMoscow', 'radioMoscow1', 'Зона 1')
+												+radio('radioMoscow2', 'radioDelMoscow', 'radioMoscow2', 'Зона 2')
+												+radio('radioMoscow3', 'radioDelMoscow', 'radioMoscow3', 'Зона 3')
+									.ordering-top_pay
+										h3 Оплата
+										ul.clearfix
+											li
+												.radio
+													label(for='radio5') 
+														input(type='radio', name='pay', checked='checked', value='', id='radio5')
+														.radio_ok
+														|
+														span Наличными
+											+radio('radio6', 'pay', 'radio6', 'Кредит')
+											+radio('radio7', 'pay', 'radio7', 'Безналичными')
+											+radio('radio8', 'pay', 'radio8', 'Visa/Master Card')
+							.ordering-mid
+								.ordering-mid_right
+									h3 Комментарий
+									form
+										textarea(type='', placeholder='Комментарий...')
+							.ordering-bottom
+								.ordering-bottom_right
+									h3 Адрес доставки
+									.form-group
+										label(for='name').required
+											|
+											span Имя
+											input(type='text', name='name', id='name', required).form-control
+									.form-group
+										label(for='lastname')
+											|
+											span Фамилия
+											input(type='text', name='lastname', id='lastname').form-control
+									.form-group
+										label(for='country')
+											|
+											span Страна
+											select.selectpicker.custom-picker(title='Российская Федерация', name='country', id='country')
+												option Украина
+												option Казахстан
+												option Беларусь
+									.form-group
+										label(for='district')
+											|
+											span Область
+											select.selectpicker.custom-picker(title='Воронежская область', name='district', id='district')
+												option Вологодская область
+												option Кировская область
+												option Московская область
+									.form-group
+										label(for='city')
+											|
+											span Город
+											input(type='text', name='city', id='city').form-control
+									.form-group
+										label(for='index')
+											|
+											span Индекс
+											input(type='text', name='index', id='index').form-control
+									.form-group
+										label(for='address')
+											|
+											span Адрес
+											input(type='text', name='address', id='address').form-control
+									.ordering-bottom_confirm
+										.checkbox
+											label(for='agree') 
+												input(type='checkbox', name='agree', value='', id='agree')
+												.checkbox_ok
+												|
+												span Я прочитал(а) и согласен с правилами
+													|
+													a(href="#") Информация о доставке
+									button(type='submit').btn.main-btn.main-btn--black Оформить заказ
+		include ./templates/footer

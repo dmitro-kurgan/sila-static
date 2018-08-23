@@ -1,0 +1,150 @@
+header
+	.header
+		.header-top
+			.container
+				.header-top_block
+					.header_hamburger#hamburger
+						span.top
+						span.mid
+						span.bottom
+					.header-top_menu#headerMenu
+						.header_close#close
+							span.top
+							span.mid
+							span.bottom
+						ul
+							li.current-menu-item
+								a(href="./") Главная
+							li
+								a(href="cart.html") Корзина
+							li
+								a(href="company.html") О компании
+							li
+								a(href="delivery.html") Оплата и доставка
+							li
+								a(href="contacts.html") Контакты
+							li
+								a(href="search.html") Поиск
+							li
+								a(href="blog.html") Новости
+							li
+								a(href="blog.html") Блог компании
+					.header-top_right
+						a(href="enter.html").log-in Войти
+						a(href="enter.html").reg Регистрация
+		.header-main
+			.container
+				.header-main_block
+					.header-main_logo
+						a(href="./")
+							//- p 
+							//- 	span ооо
+							//- 	span сила
+							//- i
+					.header-main_mobcart#headerMobCart
+					.header-main_right
+						ul
+							li
+								.header-main_box
+									.header-main_img
+										i.fa.fa-map-marker
+									.header-main_info
+										p Город
+										span Домодедово
+							li
+								.header-main_box
+									.header-main_img
+										i.fa.fa-phone
+									.header-main_info
+										p Ежедневно с 9.00 - 21.00
+										span
+											object
+												a(href="tel:+74956662335") +7 (495) 666-23-35
+							li
+
+								.header-main_box.header-cart
+									.header-cart_click#headerCart
+									.header-main_img
+										.cart 2
+										i
+									.header-main_info
+										h6 Корзина
+										span 2 товара. 10 000 руб.
+										span Вес товара: 100 кг
+										//- -------CART--------
+									.header-cart_inner#headerCartInner
+										.header-cart_head
+											.header-cart_shopping-cart
+												span
+												i.cart 2
+											.header-cart_left
+												p Товары
+											.header-cart_right
+												p Цена
+										.header-cart_body
+											mixin cartbox(img, name, quantity, price)
+												.header-cart_box
+													.header-cart_left
+														.header-cart_img
+															img(src=require('./components/images/' + img), alt='img')
+														.header-cart_text
+															.header-cart_name
+																p= name
+															.header-cart_quantity
+																p= quantity
+													.header-cart_right
+														.header-cart_price
+															p= price
+														.header-cart_del
+											+cartbox('pic-4.png', 'Колодка Тормозная Серия 1937С', '1 шт.', '444 руб.')
+											+cartbox('pic-2.png', 'Колодка Тормозная Серия 1937С', '100 шт.', '1000 руб.')
+											+cartbox('pic-4.png', 'Колодка Тормозная Серия 1937С', '1 шт.', '444 руб.')
+										.header-cart_bottom
+											.header-cart_total
+												.header-cart_cost
+													p Всего:
+													span 1888 руб.
+												.header-cart_weight
+													p Общий вес:
+													span 100 кг.												
+											a(href="#").btn.main-btn.main-btn--black Оформить
+		.header-bottom
+			.container
+				.header-bottom_block
+					a(href="#").btn.main-btn.main-btn--black.catalog-btn Каталог
+						object
+							ul.header-bottom_dropdown
+								li
+									a(href="category.html") Запчасти КАМАЗ
+								li
+									a(href="category.html") Запчасти МАЗ
+								li.menu-item-has-children
+									a(href="category.html") Запчасти ЗИЛ
+									ul
+										li
+											a(href="category.html") Запчасти КАМАЗ
+										li
+											a(href="category.html") Запчасти МАЗ
+										li
+											a(href="category.html") Запчасти ЗИЛ
+								li.menu-item-has-children
+									a(href="category.html") Запчасти УРАЛ
+									ul
+										li
+											a(href="category.html") Запчасти КАМАЗ
+										li
+											a(href="category.html") Запчасти МАЗ
+										li
+											a(href="category.html") Запчасти ЗИЛ
+								li
+									a(href="category.html") Запчасти УАЗ
+								li
+									a(href="category.html") Запчасти ГАЗ
+								li
+									a(href="category.html") Запчасти ПАЗ
+					.header__form
+						.form-group
+							input(type='text', placeholder='Введите наименование товара...').form-control
+						.form-group
+							input(type='text', placeholder='Введите артикул товара...').form-control
+						button(type='submit').btn.main-btn.main-btn--black Поиск

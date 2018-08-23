@@ -1,0 +1,37 @@
+section.viewed
+	.container
+		.viewed_left
+			h6 Вы 
+				br
+				| просматривали
+			p.
+				С другой стороны консультация с широким активом позволяет выполнять важные задания
+		.viewed_right
+			.slider.slick-viewed
+				mixin sliderbox(pic, name, code, mark, weight, cost)
+					div
+						a(href="product-pg.html").slick-viewed_box
+							.slick-viewed_img
+								img(src=require("./components/images/" + pic), alt="photo")
+							.slick-viewed_name
+								h6= name
+							.slick-viewed_char
+								.slick-viewed_code Код:
+									span= code
+								.slick-viewed_mark Артикул: 
+									span= mark
+								.slick-viewed_weight Вес: 
+									span= weight
+							.slick-viewed_cost
+								p= cost
+							.slick-viewed_sale
+								p Опт 1:
+									span 373 руб.
+								p Опт 1:
+									span 373 руб.
+							object
+								a(href="#").btn.main-btn В корзину
+				+sliderbox('pic-1.png', 'Колодка тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+				+sliderbox('pic-2.png', 'Колодка Тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+				+sliderbox('pic-3.png', 'Колодка Тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
+				+sliderbox('pic-1.png', 'Колодка Тормозная', '6793-3903-34', '43253-2402011-40', '20 кг', '444 руб.')
